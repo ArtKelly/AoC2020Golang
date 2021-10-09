@@ -3,6 +3,7 @@ package util
 import (
 	"bufio"
 	"os"
+	"strconv"
 )
 
 func Check(e error) {
@@ -22,4 +23,16 @@ func ReadLines(path string) ([]string, error) {
 		lines = append(lines, scanner.Text())
 	}
 	return lines, scanner.Err()
+}
+
+func StringsArrayToInts(strings []string) ([]int, error) {
+	var ints []int
+
+	for _, i := range strings {
+		j, err := strconv.Atoi(i)
+		Check(err)
+		ints = append(ints, j)
+	}
+
+	return ints, nil
 }
