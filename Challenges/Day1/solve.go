@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	lines1, err := util.ReadLines("Challenges/Day1/1.txt")
+	lines1, err := util.ReadLines("Challenges/Day1/input.txt")
 	util.Check(err)
 
 	lines, err := util.StringsArrayToInts(lines1)
