@@ -1,0 +1,17 @@
+{
+    // https://github.com/golang/vscode-go/blob/master/docs/tasks.md
+    "version": "2.0.0",
+    "type": "shell",
+    "command": "go",
+    "cwd": "${workspaceFolder}",
+    "tasks": [
+        {
+            "label": "run",
+            "args": ["run", "${file}"],
+            "group": "build",
+            "presentation": {
+                "clear": true
+            }
+        }
+    ],
+}
